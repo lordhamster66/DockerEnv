@@ -8,6 +8,7 @@ services:
     ports:
       - 5432:5432
     environment:
+      POSTGRES_PASSWORD: 88888888
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - ./data:/var/lib/postgresql/data
