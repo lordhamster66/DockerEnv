@@ -1,14 +1,13 @@
 version: "3"
 services:
   postgres:
-    image: postgres:14.4
-    container_name: postgres14
+    image: postgres:15.3
+    container_name: postgres15
     command: postgres -c stats_temp_directory=/tmp
     restart: always
     ports:
       - 5432:5432
     environment:
-      POSTGRES_PASSWORD: zhicui007
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - ./data:/var/lib/postgresql/data
