@@ -1,8 +1,9 @@
 version: "3"
 services:
   postgres:
-    image: postgres:15.3
-    container_name: postgres15
+    image: postgres:14.4
+    container_name: postgres14
+    command: postgres -c stats_temp_directory=/tmp
     restart: always
     ports:
       - 5432:5432
