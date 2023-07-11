@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  showdoc:
+    container_name: showdoc
+    privileged: true
+    ports:
+      - "4999:80"
+    volumes:
+      - "./data:/var/www/html/"
+    image: star7th/showdoc
